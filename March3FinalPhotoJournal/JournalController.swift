@@ -14,6 +14,8 @@ protocol ImagePhotoDelegate: AnyObject {
     func getImageData(_ image: ImageObject)
 }
 
+//MARK: Needs to find out why Fatal error: Unexpectedly found nil while implicitly unwrapping an Optional, what is causing it ask Antonio tomorrow !!
+
 class JournalController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
