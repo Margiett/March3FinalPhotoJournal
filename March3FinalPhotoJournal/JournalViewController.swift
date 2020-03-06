@@ -14,9 +14,9 @@ protocol ImagePhotoDelegate: AnyObject {
     func getImageData(_ image: ImageObject)
 }
 
-//MARK: Needs to find out why Fatal error: Unexpectedly found nil while implicitly unwrapping an Optional, what is causing it ask Antonio tomorrow !!
+//MARK: Why my button does not work !!!!
 
-class JournalController: UIViewController {
+class JournalViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -28,7 +28,7 @@ class JournalController: UIViewController {
     }
     
     public var selectedImage: ImageObject?
-    public var persistence = DataPersistence<ImageObject>(filename: "images.plist")
+    public var dp = DataPersistence<ImageObject>(filename: "images.plist")
     public var newPhoto = false
     
     
@@ -61,7 +61,7 @@ class JournalController: UIViewController {
     
     private func loadImageObjects() {
         do {
-            imageObjects = try persistence.loadItems()
+            imageObjects = try dp.loadItems()
         } catch {
             print("could not get photos")
         }
@@ -85,7 +85,7 @@ class JournalController: UIViewController {
     
 }
 //MARK: Extensions
-extension JournalController: UICollectionViewDataSource {
+extension JournalViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageObjects.count
     }
@@ -97,6 +97,7 @@ extension JournalController: UICollectionViewDataSource {
         let imageObject = imageObjects[indexPath.row]
         cell.cellDelegate = self
         cell.index = indexPath
+//        cell.editButtonPress.addTarget(self, action: <#T##Selector#>, for: .touchUpInside)
         
         selectedImage = imageObject
         imageDelegate?.getImageData(imageObject)
@@ -107,7 +108,7 @@ extension JournalController: UICollectionViewDataSource {
     
 }
 
-extension JournalController: UICollectionViewDelegateFlowLayout {
+extension JournalViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let maxWidth: CGFloat = UIScreen.main.bounds.size.width
         let itemWidth: CGFloat = maxWidth * 0.80
@@ -115,10 +116,10 @@ extension JournalController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension JournalController: JournalCollectionDelegate {
-    func clickCell(index: Int, photoCell: JournalCell) {
+extension JournalViewController: JournalCollectionDelegate {
+    func clickCellPress(index: Int, photoCell: JournalCell) {
         print("\(index) is clicked")
-        
+        print("Testing 1")
         guard let indexPath = photoCell.index else { return }
         
         let imageObject = imageObjects[indexPath.row]
@@ -138,13 +139,13 @@ extension JournalController: JournalCollectionDelegate {
         alertController.addAction(deleteAction)
         alertController.addAction(cancelAction)
         present(alertController, animated:  true)
-
+print("testing to see if this workk !!!!")
     }
     
     private func deletePhoto(indexPath: IndexPath) {
         imageObjects.remove(at: indexPath.row)
         do{
-            try persistence.deleteItem(at: indexPath.row)
+            try dp.deleteItem(at: indexPath.row)
             
         }catch {
             print(" there was an error deleting")
@@ -152,11 +153,11 @@ extension JournalController: JournalCollectionDelegate {
     }
 }
 
-extension JournalController: AddPhotoToCollectionDelegate {
+extension JournalViewController: AddPhotoToCollectionDelegate {
     func updateCollectionViewDelegate(image: ImageObject) {
         imageObjects.insert(image, at: 0)
         do {
-            try persistence.createItem(image)
+            try dp.createItem(image)
         } catch {
             print("was unable to create")
         }
@@ -166,7 +167,7 @@ extension JournalController: AddPhotoToCollectionDelegate {
         let index = imageObjects.firstIndex(of: original)!
         imageObjects.remove(at: index)
         imageObjects.insert(newPhoto, at: index)
-        persistence.update(original, with: newPhoto)
+        dp.update(original, with: newPhoto)
     }
     
             

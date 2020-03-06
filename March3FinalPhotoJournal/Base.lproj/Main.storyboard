@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Journal Controller-->
+        <!--Journal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="JournalController" id="BYZ-38-t0r" customClass="JournalController" customModule="March3FinalPhotoJournal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JournalController" id="BYZ-38-t0r" customClass="JournalViewController" customModule="March3FinalPhotoJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="Auk-0G-AWj" customClass="JournalCell" customModule="March3FinalPhotoJournal" customModuleProvider="target">
                                         <rect key="frame" x="47.5" y="0.0" width="319" height="397"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HFl-cH-eor" customClass="JournalCell" customModule="March3FinalPhotoJournal" customModuleProvider="target">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HFl-cH-eor">
                                             <rect key="frame" x="0.0" y="0.0" width="319" height="397"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -53,11 +53,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nZ-GP-Yey">
-                                                    <rect key="frame" x="282" y="238" width="29" height="22"/>
+                                                    <rect key="frame" x="266" y="238" width="37" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.86417544469999996" green="0.093813231819999995" blue="0.073816770919999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" image="ellipsis" catalog="system"/>
                                                     <connections>
-                                                        <action selector="editButtonPressed:" destination="Auk-0G-AWj" eventType="touchUpInside" id="WJl-uh-Dab"/>
+                                                        <action selector="editButtonPressed:" destination="Auk-0G-AWj" eventType="touchUpInside" id="adD-un-tNx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -66,6 +67,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="gHV-Py-ITF" id="N5b-R8-LKh"/>
                                             <outlet property="descriptionLabel" destination="9qG-zQ-PXo" id="0fV-ty-xYQ"/>
+                                            <outlet property="editButtonPress" destination="2nZ-GP-Yey" id="SEH-Vf-F8a"/>
                                             <outlet property="photoImage" destination="cuM-oU-o9e" id="iE9-iw-KZc"/>
                                         </connections>
                                     </collectionViewCell>

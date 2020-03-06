@@ -11,13 +11,15 @@ import UIKit
 protocol JournalCollectionDelegate: AnyObject { // AnyObject requires ImageCellDelegate only works with class types
     
     // list required functions, initializers, variables
-    func clickCell(index: Int, photoCell: JournalCell)
+    func clickCellPress(index: Int, photoCell: JournalCell)
 }
 
 class JournalCell: UICollectionViewCell {
     @IBOutlet var photoImage: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    
+    
     
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -26,6 +28,8 @@ class JournalCell: UICollectionViewCell {
         return formatter
     }()
      // step 2: creating custom delegation - define optional delegate variable
+    @IBOutlet weak var editButtonPress: UIButton!
+    
     var cellDelegate: JournalCollectionDelegate?
     var index: IndexPath?
     
@@ -38,10 +42,14 @@ class JournalCell: UICollectionViewCell {
             return
         }
         photoImage.image = image
+        
     }
     
+    
+    
     @IBAction func editButtonPressed(_ sender: UIButton) {
-        cellDelegate?.clickCell(index: (index?.row)!, photoCell: self)
+
+        cellDelegate?.clickCellPress(index: (index?.row)!, photoCell: self)
     }
     
 }

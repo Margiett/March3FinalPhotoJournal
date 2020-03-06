@@ -19,7 +19,7 @@
 		9FBA31C4240ED80E00085E42 /* DataPersistence in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBA31C3240ED80E00085E42 /* DataPersistence */; };
 		9FBA31C7240ED84100085E42 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FBA31C6240ED84100085E42 /* ImageKit */; };
 		9FBA31C9240EDCE400085E42 /* JournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA31C8240EDCE400085E42 /* JournalCell.swift */; };
-		9FBA31CB240EDF8300085E42 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA31CA240EDF8300085E42 /* JournalController.swift */; };
+		9FBA31CB240EDF8300085E42 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA31CA240EDF8300085E42 /* JournalViewController.swift */; };
 		9FBA31CD240EE15700085E42 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA31CC240EE15700085E42 /* AddPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		9FBA31BE240ED76900085E42 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		9FBA31C0240ED79D00085E42 /* ImageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
 		9FBA31C8240EDCE400085E42 /* JournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCell.swift; sourceTree = "<group>"; };
-		9FBA31CA240EDF8300085E42 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		9FBA31CA240EDF8300085E42 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		9FBA31CC240EE15700085E42 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 				9FBA31BE240ED76900085E42 /* PersistenceHelper.swift */,
 				9FBA31C0240ED79D00085E42 /* ImageObject.swift */,
 				9FBA31C8240EDCE400085E42 /* JournalCell.swift */,
-				9FBA31CA240EDF8300085E42 /* JournalController.swift */,
+				9FBA31CA240EDF8300085E42 /* JournalViewController.swift */,
 				9FBA31CC240EE15700085E42 /* AddPhotoViewController.swift */,
 			);
 			path = March3FinalPhotoJournal;
@@ -228,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBA31C1240ED79D00085E42 /* ImageObject.swift in Sources */,
-				9FBA31CB240EDF8300085E42 /* JournalController.swift in Sources */,
+				9FBA31CB240EDF8300085E42 /* JournalViewController.swift in Sources */,
 				9FBA31BD240ED74300085E42 /* FileManger.swift in Sources */,
 				9FBA319B240ED18200085E42 /* AppDelegate.swift in Sources */,
 				9FBA31BF240ED76900085E42 /* PersistenceHelper.swift in Sources */,

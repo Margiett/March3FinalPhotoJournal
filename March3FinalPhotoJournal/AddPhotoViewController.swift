@@ -128,7 +128,7 @@ class AddPhotoViewController: UIViewController, ImagePhotoDelegate {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let journalVC = segue.destination as? JournalController else { return }
+        guard let journalVC = segue.destination as? JournalViewController else { return }
         
         journalVC.imageDelegate = self
         getImageData(originalPhoto!)
