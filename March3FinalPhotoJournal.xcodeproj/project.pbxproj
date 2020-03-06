@@ -72,6 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FB592742412D52B007673B1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9FBA31CA240EDF8300085E42 /* JournalViewController.swift */,
+				9FBA31CC240EE15700085E42 /* AddPhotoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9FB592752412D543007673B1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9FBA31C8240EDCE400085E42 /* JournalCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9FBA318E240ED18200085E42 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +110,8 @@
 		9FBA3199240ED18200085E42 /* March3FinalPhotoJournal */ = {
 			isa = PBXGroup;
 			children = (
+				9FB592752412D543007673B1 /* Cell */,
+				9FB592742412D52B007673B1 /* ViewControllers */,
 				9FBA319A240ED18200085E42 /* AppDelegate.swift */,
 				9FBA319C240ED18200085E42 /* SceneDelegate.swift */,
 				9FBA31A0240ED18200085E42 /* Main.storyboard */,
@@ -102,9 +121,6 @@
 				9FBA31BC240ED74300085E42 /* FileManger.swift */,
 				9FBA31BE240ED76900085E42 /* PersistenceHelper.swift */,
 				9FBA31C0240ED79D00085E42 /* ImageObject.swift */,
-				9FBA31C8240EDCE400085E42 /* JournalCell.swift */,
-				9FBA31CA240EDF8300085E42 /* JournalViewController.swift */,
-				9FBA31CC240EE15700085E42 /* AddPhotoViewController.swift */,
 			);
 			path = March3FinalPhotoJournal;
 			sourceTree = "<group>";
