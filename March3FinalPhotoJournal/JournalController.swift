@@ -123,7 +123,8 @@ extension JournalController: JournalCollectionDelegate {
         
         let imageObject = imageObjects[indexPath.row]
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let editAction = UIAlertAction(title: "Edit", style: .default) { [weak self] alertAction in self?.showAddPhotoVC(imageObject)
+        let editAction = UIAlertAction(title: "Edit", style: .default) { [weak self] alertAction in
+            self?.showAddPhotoVC(imageObject)
             
         }
         let shareAction = UIAlertAction(title: "Share", style: .default)

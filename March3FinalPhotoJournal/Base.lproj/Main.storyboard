@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EWz-ph-COu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EWz-ph-COu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,19 +55,19 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nZ-GP-Yey">
                                                     <rect key="frame" x="282" y="238" width="29" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button" image="ellipsis" catalog="system"/>
+                                                    <state key="normal" image="ellipsis" catalog="system"/>
                                                     <connections>
-                                                        <action selector="editButtonPressed:" destination="HFl-cH-eor" eventType="touchUpInside" id="opr-vi-Rn9"/>
+                                                        <action selector="editButtonPressed:" destination="Auk-0G-AWj" eventType="touchUpInside" id="WJl-uh-Dab"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <connections>
-                                                <outlet property="dateLabel" destination="gHV-Py-ITF" id="SLw-cv-Auq"/>
-                                                <outlet property="descriptionLabel" destination="9qG-zQ-PXo" id="4Z0-1j-Wm3"/>
-                                                <outlet property="photoImage" destination="cuM-oU-o9e" id="MhC-bu-uA5"/>
-                                            </connections>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="319" height="397"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="gHV-Py-ITF" id="N5b-R8-LKh"/>
+                                            <outlet property="descriptionLabel" destination="9qG-zQ-PXo" id="0fV-ty-xYQ"/>
+                                            <outlet property="photoImage" destination="cuM-oU-o9e" id="iE9-iw-KZc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447.8260869565217" y="47.544642857142854"/>
+            <point key="canvasLocation" x="1446.376811594203" y="47.544642857142854"/>
         </scene>
         <!--Add Photo View Controller-->
         <scene sceneID="WQl-rV-4bR">
