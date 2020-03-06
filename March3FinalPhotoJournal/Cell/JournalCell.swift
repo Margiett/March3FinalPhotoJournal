@@ -20,7 +20,7 @@ class JournalCell: UICollectionViewCell {
     @IBOutlet var dateLabel: UILabel!
     
     
-    
+    //https://nsdateformatter.com
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE, MMM d, yyyy, hh:mm a"
